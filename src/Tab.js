@@ -19,7 +19,7 @@ export const Tab = function ({ children, activeTab }) {
             <nav>
                 {children.map((tab, index) =>
                     <button
-                        className={tab.props.panelYazisi === 'kirmizi' ? style.Kirmizi : tab.props.panelYazisi === 'mor' ? style.Mor : style.Kahverengi}
+                        className={tab.props.panelColor === 'red' ? style.Red : tab.props.panelColor === 'magenta' ? style.Magenta : style.Brown}
                         onClick={() => setActive(index)}
 
                         key={index}>{tab.props.title}</button>)}
@@ -30,6 +30,6 @@ export const Tab = function ({ children, activeTab }) {
     );
 }
 
-Tab.Panel = function ({ children, panelYazisi }) {
-    return <p className={panelYazisi === 'kirmizi' ? style.Kirmizi : panelYazisi === 'mor' ? style.Mor : style.Kahverengi}>{children}</p>
+Tab.Panel = function ({ children, panelColor }) {
+    return <p className={panelColor === 'red' ? style.Red : panelColor === 'magenta' ? style.Magenta : style.Brown}>{children}</p>
 }
