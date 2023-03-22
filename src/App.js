@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import appCss from './App.module.css'
 
-function App() {
+import { Tab } from './Tab';
+
+
+export const App =  function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Tab activeTab="1">
+      <Tab.Panel title="AnaSayfa" panelYazisi="kirmizi">Panel 1</Tab.Panel>
+      <Tab.Panel title="Hakkımda" panelYazisi="mor">Panel 2</Tab.Panel>
+      <Tab.Panel title="Contact" panelYazisi="kahverengi">Panel 3</Tab.Panel>
+    </Tab>
   );
 }
-
-export default App;
